@@ -2,9 +2,112 @@
 <html>
 <head>
 	<title>Jai Luthra</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+	<script>
+		$('.counting').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 3000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+  
+
+});
+
+	</script>
+	<h1 align="center"> My Website </h1>
 <h> Hello This is Jai </h>
 <p> A CSE Undergrad @ IIT MANDI </p>
+
+<!-- start count stats -->
+
+<section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-lg-3 stats">
+				<i class="fa fa-code" aria-hidden="true"></i>
+				<div class="counting" data-count="900000">900000</div>
+				<h5>Lines of code</h5>
+			</div>
+
+			<div class="col-lg-3 stats">
+				<i class="fa fa-check" aria-hidden="true"></i>
+				<div class="counting" data-count="0">0</div>
+				<h5>Projects done</h5>
+			</div>
+
+			<div class="col-lg-3 stats">
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<div class="counting" data-count="75">75</div>
+				<h5>Friends</h5>
+			</div>
+
+			<div class="col-lg-3 stats">
+				<i class="fa fa-coffee" aria-hidden="true"></i>
+				<div class="counting" data-count="900">900</div>
+				<h5>Cups of coffee</h5>
+			</div>
+
+
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- end container -->
+
+</section>
+
+<!-- end cont stats -->
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 7,2019").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML ="Time remaining for my birthday " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
