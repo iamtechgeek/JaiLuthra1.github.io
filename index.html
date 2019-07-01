@@ -1,107 +1,118 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Jai Luthra</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+ <link href="styles.css" rel="stylesheet" type="text/css"> 
 <body>
-	<script>
-		$('.counting').each(function() {
-  var $this = $(this),
-      countTo = $this.attr('data-count');
+
+<div id="nav-bar">
+     	<nav class="navbar navbar-expand-lg navbar-light">
+        		<a class="navbar-brand"></a>
+  				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    				<span class="navbar-toggler-icon"></span>
+  				</button>
+  			<div class="collapse navbar-collapse" id="navbarNav">
+    			<ul class="navbar-nav ml-auto">
+      				<li class="nav-item active">
+        				<a class="nav-link" href="#abtme">About Me</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="#lan">Languages</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="#ctt">Contact Me</a>
+      				</li>
+    			</ul>
+  			</div>
+		</nav>
+     </div>
+     <br>
+     <br>
+     <br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <br>
+
+<div id="abtme" class="typewriter">
+  <img src="/home/jai/Github/JaiLuthra1.github.io/IMG_20180804_164529.jpg" height="150px" id="myself">
+  <br>
+  <br>
+  Hi this is Jai.
+  <br>
+  CSE Undergrad @ IIT Mandi
+  <br>
+  ML enthusiast
+  <br>
+  Web Developer
+  <br>
+  Competitive Programmer
+  <br>
+
+</div>
+
+<div class="header">
+
+<h1> Languages that I know </h1>
+
+</div>
+
+<div id="lan">
+
+<progress max="100" value="45"></progress> &nbsp&nbsp C++
+<br>
+<br>
+<progress max="100" value="20"></progress> &nbsp&nbsp Python
+<br>
+<br>
+<progress max="100" value="25"></progress> &nbsp&nbsp HTML,CSS
+<br>
+<br>
+<progress max="100" value="10"></progress> &nbsp&nbsp Others
+<br>
+<br>
+
+</div>
+
+  <div class="header">
+
+<h1> Contact Me </h1>
+
+</div>
+
+<div id="ctt">
   
-  $({ countNum: $this.text()}).animate({
-    countNum: countTo
-  },
+  Want to contact me. Feel free to knock my door.
+  <br>
+  <a href="https://www.facebook.com/jai.luthra.1690"><i class="fa fa-facebook-f"></i></i></a> &nbsp&nbsp
+  <a href="https://github.com/JaiLuthra1"><i class="fa fa-github"></i></a> &nbsp&nbsp
+  <a href="https://www.facebook.com/jai.luthra.1690"><i class="fa fa-linkedin"></i></a>
 
-  {
+  <div id="eml">
+    <h3>Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Call</h3>
+    b18061@students.iitmandi.ac.in &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9306461199
+    <br>
+    luthrajaiji@gmail.com &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 9138463422
+  </div>
 
-    duration: 3000,
-    easing:'linear',
-    step: function() {
-      $this.text(Math.floor(this.countNum));
-    },
-    complete: function() {
-      $this.text(this.countNum);
-      //alert('finished');
-    }
+</div>
 
-  });  
-  
-
-});
-
-	</script>
-	<h1 align="center"> My Website </h1>
-<h> Hello This is Jai </h>
-<p> A CSE Undergrad @ IIT MANDI </p>
-
-<!-- start count stats -->
-
-<section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-lg-3 stats">
-				<i class="fa fa-code" aria-hidden="true"></i>
-				<div class="counting" data-count="900000">900000</div>
-				<h5>Lines of code</h5>
-			</div>
-
-			<div class="col-lg-3 stats">
-				<i class="fa fa-check" aria-hidden="true"></i>
-				<div class="counting" data-count="0">0</div>
-				<h5>Projects done</h5>
-			</div>
-
-			<div class="col-lg-3 stats">
-				<i class="fa fa-coffee" aria-hidden="true"></i>
-				<div class="counting" data-count="900">900</div>
-				<h5>Cups of coffee</h5>
-			</div>
-
-
-		</div>
-		<!-- end row -->
-	</div>
-	<!-- end container -->
-
-</section>
-
-<!-- end cont stats -->
-
-<p id="demo"></p>
 
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jul 7,2019").getTime();
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML ="Time remaining for my birthday " + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("nav-bar").style.top = "0";
+  } else {
+    document.getElementById("nav-bar").style.top = "-50px";
   }
-}, 1000);
-</script>
+}
 
+</script>
 </body>
 </html>

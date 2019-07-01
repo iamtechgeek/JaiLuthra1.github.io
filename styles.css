@@ -1,28 +1,153 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 
+
 body {
-	background: #40E0D0;
+  width: 100wh;
+  height: 90vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+  -moz-animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease infinite;
 }
 
-/*/ start count stats /*/
-
-section#counter-stats {
-	display: flex;
-	justify-content: center;
-	margin-top: 100px;
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
 
-.stats {
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+#abtme
+{
+  font-size: 20px;
   text-align: center;
-  font-size: 35px;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  padding-top: 100px;
+}
+#nav-bar {
+  background-color: yellow;
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  display: block;
+  transition: top 0.25s;
 }
 
-.stats .fa {
-  color: #008080;
-  font-size: 60px;
+#nav-bar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: right;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-/*/ end count stats /*/
+#nav-bar a:hover {
+  background-color: yellow;
+  color: red;
+}
+.header
+{
+  font-size: 20px;
+  text-align: center;
+  padding-top: 100px;
+  color: aqua;
+}
+#lan
+{
+  font-size: 20px;
+  align-content: center;
+  padding-top: 10px;
+  padding-left:15px;
+}
+#ctt
+{
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 800px;
+  height: 25px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image:
+     -webkit-linear-gradient(-45deg, 
+                             transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                             rgba(0,0, 0, .1) 66%, transparent 66%),
+     -webkit-linear-gradient(top, 
+                             rgba(255, 255, 255, .25), 
+                             rgba(0, 0, 0, .25)),
+     -webkit-linear-gradient(left, #09c, #f44);
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.typewriter
+{
+  font-family: sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em pink; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(40, end),
+    blink-caret 2s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
