@@ -151,3 +151,7 @@ progress[value]::-webkit-progress-value {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+#ctt
+{
+   color: pink;
+}
